@@ -21,7 +21,6 @@ function commit-changes {
 
 }
 
-
 get-dart-dependencies 
 build-dart
 commit-changes
