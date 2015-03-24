@@ -27,9 +27,10 @@ var _mapping = {
 void main() {
   //get the root path of the server
   final String root = Platform.script.resolve(PATH_TO_WEB_CONTENT).toFilePath();
-  
+  print("Root is $root");
+  var port = Platform.environment.containsKey('PORT') ? int.parse(Platform.environment['PORT']) : 8881;
   //start server when connection to db is successful
   _db.open().then((_) {
-    new StreamServer(uriMapping: _mapping, homeDir: root).start(port:8881);
+    new StreamServer(uriMapping: _mapping, homeDir: root).start(port:port);
   });
 }
