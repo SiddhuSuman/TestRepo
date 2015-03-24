@@ -1,8 +1,8 @@
 library menu_controller;
 
 import 'package:angular/angular.dart';
-import '../service/query_service.dart';
-import '../service/menu.dart';
+import 'package:mongo_pro/service/query_service.dart';
+import 'package:mongo_pro/service/menu.dart';
 import 'package:mongo_pro/service/common_service.dart';
 //import '../../web/test.dart';
 import 'dart:async';

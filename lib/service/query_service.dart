@@ -2,7 +2,7 @@ library objectory_service;
 
 import 'dart:async';
 import 'package:objectory/objectory_browser.dart';
-import 'menu.dart';
+import 'package:mongo_pro/service/menu.dart';
 import 'package:angular/angular.dart';
 import 'dart:html';
 
