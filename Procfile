@@ -1,1 +1,1 @@
-web: ./dart-sdk/bin/dart --pacakge-root=./package/ web/stream_server.dart
+web: ./dart-sdk/bin/dart web/stream_server.dart
