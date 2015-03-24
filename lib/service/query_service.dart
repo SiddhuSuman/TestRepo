@@ -53,6 +53,7 @@ class QueryService {
         String cat = "";
         _categories = [];
         for (MenuItem item in items) {
+          print(item.name);
           _menuItemsCache[item.menuItemId] = item;
           if(cat != item.category){
             cat = item.category;
@@ -68,7 +69,8 @@ class QueryService {
       }));
       
       return Future.wait(allTasks);
-    });
+    },
+    onError: ()=>print("error in query service"));
   }
 
   //Specific queries
