@@ -5,7 +5,8 @@ import 'package:objectory/objectory_browser.dart';
 import 'menu.dart';
 import 'package:angular/angular.dart';
 
-const DefaultUri = '127.0.0.1:8881';
+//var port = Platform.environment.containsKey('PORT')?Platform.environment['PORT']:8881;
+var DefaultUri = '0.0.0.0';
 
 @Injectable()
 class QueryService {
