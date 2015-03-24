@@ -61,12 +61,14 @@ class QueryService {
           }
         }
         return new Future.value(true);
-      }));
+      },
+      onError: ()=>print("error in first future")));
       
       allTasks.add(objectory[RestaurantDetail].findOne().then((detail){
         _restaurantDetail = detail;
         return new Future.value(true);
-      }));
+      },
+      onError: ()=>print("error in second future")));
       
       return Future.wait(allTasks);
     },
