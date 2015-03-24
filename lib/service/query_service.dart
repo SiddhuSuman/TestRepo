@@ -4,13 +4,16 @@ import 'dart:async';
 import 'package:objectory/objectory_browser.dart';
 import 'menu.dart';
 import 'package:angular/angular.dart';
+import 'dart:html';
 
 //var port = Platform.environment.containsKey('PORT')?Platform.environment['PORT']:8881;
-var DefaultUri = '0.0.0.0';
+//var DefaultUri = 'restaurant-pp.herokuapp.com:16011';
+var DefaultUri = '';
 
 @Injectable()
 class QueryService {
 
+  Window _window;
   //Future of queries being completed
   Future _loaded;
   Future _inited;
@@ -21,12 +24,15 @@ class QueryService {
   RestaurantDetail _restaurantDetail;
 
   //constructor for calling the loadData function
-  QueryService() {
+  QueryService(this._window) {
     /*
     _inited.then((_){
       _loaded = loadData();
     });
     */
+    
+    print("window location is:");
+    print(DefaultUri = _window.location.origin.replaceAll('http://', ''));
     _loaded = loadData();
     
   }
