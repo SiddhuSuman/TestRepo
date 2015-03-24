@@ -58,7 +58,7 @@ class MenuController{
       querySelector('.loader').classes.remove('hide');
     });
     
-    print(_commonService.session['table_num']);
+    //print(_commonService.session['table_num']);
     
     _loadData().then((_){
         querySelector('.loader').classes.add('hide');

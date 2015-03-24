@@ -34,7 +34,9 @@ class QueryService {
     print("window location is:");
     print(DefaultUri = _window.location.origin.replaceAll('http://', ''));
     _loaded = loadData();
-    
+    _loaded.then((e){
+      print("Query Service loading done");
+    });
   }
   
   Future initData(){
