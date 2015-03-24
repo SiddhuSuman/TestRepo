@@ -8,7 +8,7 @@ import 'package:mongo_dart/mongo_dart.dart';
 import "package:stream/stream.dart";
 
 
-final String PATH_TO_WEB_CONTENT = "../web";
+final String PATH_TO_WEB_CONTENT = "../build/web";
 //final _db = new Db('mongodb://sid:sunny777@ds055680.mongolab.com:55680/mydb');
 //final _db = new Db('mongodb://127.0.0.1:27017/mydb');
 final _db = new Db(Platform.environment['PROD_MONGODB']);
