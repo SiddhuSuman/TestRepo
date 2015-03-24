@@ -36,6 +36,7 @@ class QueryService {
     _loaded = loadData();
     _loaded.then((e){
       print("Query Service loading done");
+      print(_restaurantDetail.name);
     });
   }
   
