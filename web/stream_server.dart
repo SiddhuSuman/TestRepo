@@ -11,7 +11,7 @@ import "package:stream/stream.dart";
 final String PATH_TO_WEB_CONTENT = "../web";
 //final _db = new Db('mongodb://sid:sunny777@ds055680.mongolab.com:55680/mydb');
 //final _db = new Db('mongodb://127.0.0.1:27017/mydb');
-final _db = Platform.environment['PROD_MONGODB'];
+final _db = new Db(Platform.environment['PROD_MONGODB']);
 int _token = 1;
 
 //A WebSocket handler
