@@ -7,7 +7,7 @@ List<String> temp = [];
 //starts listening on port:8000 for potential websocket protocol type requests
 void main() {
   HttpServer
-    .bind(InternetAddress.ANY_IP_V6, 8000)
+    .bind(InternetAddress.ANY_IP_V6, Platform.environment['PORT'])
     .then((server){
       print("Kitchen server is running on "
           "'http://${server.address.host}:8000/'");
